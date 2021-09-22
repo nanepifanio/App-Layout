@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+/* Global Styles */
+
+body, h1, p, ul, li, a {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-size: 1rem;
+  font-family: 'Rubik', sans-serif;
+  background-color: #f5f3f7;
+  overflow-x: hidden;
+  background-image: url('images/bg-top-left.svg'),url('images/bg-bottom-right.svg');
+  background-repeat: no-repeat, no-repeat;
+  background-position-y: top, bottom;
+  background-position-x: left, right;
+  background-size: 380px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Main */
+
+main {
+  display: grid;
+  padding: 100px calc((100% - 960px) / 2);
+  grid-template-columns: 1fr;
+  gap: 70px;
+  margin: 0 auto;
+}
+
+article h1 {
+  font-size: 2.25rem;
+  font-weight: 500;
+  color: #3e2753;
+  margin-bottom: 25px;
+}
+
+article p {
+  line-height: 1.6;
+  color: #a39daa;
+}
+
+#main {
+  display: flex;
+  align-items: center;
+}
+
+#main section + article {
+  margin-left: 130px;
+}
+
+/* Chat */
+
+/* Samuel Perfil */
+
+section {
+  display: grid;
+  grid-template-columns: 300px;
+  border: 15px solid #ffffff;
+  border-radius: 25px;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.103);
+  background-color: #f5f3f7;
+}
+
+header {
+  display: grid;
+  background-image: linear-gradient(90deg, #8838ff, #e942ff);
+  border-radius: 10px 10px 5px 5px;
+}
+
+header div:first-child {
+  background-color: #ffffff;
+  margin: 0 auto;
+  padding: 10px;
+  width: 180px;
+  border-radius: 0 0 15px 15px;
+}
+
+#perfil {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  justify-content: space-between;
+}
+
+#perfil img {
+  border-radius: 50%;
+  max-width: 30px;
+  object-fit: cover;
+  border: 2px solid #ffffff;
+  margin-left: -80px;
+}
+
+#perfil span {
+  color: #ffffff;
+}
+
+#perfil ul {
+  margin-left: -90px;
+}
+
+#perfil ul li:first-child {
+  color: #ffffff;
+}
+
+#perfil ul li:nth-child(2) {
+  color: #d89eff;
+  font-size: .75rem;
+}
+
+/* Chating */
+
+#chating {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  font-size: .6875rem;
+}
+
+#chating p {
+  max-width: 175px;
+  padding: 10px;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+#chating p:nth-child(6) {
+  margin-top: 10px;
+}
+
+#chating ul + ul {
+  margin-top: 10px;
+}
+
+#chating ul:nth-child(8) {
+  margin-bottom: 10px;
+}
+
+.chat-left {
+  background-color: #d89eff3d;
+  color: #9241c8;
+  border-radius: 15px 15px 15px 5px;
+}
+
+#dogs {
+  align-self: flex-end;
+  display: flex;
+  max-width: 160px;
+  margin: 10px 0;
+}
+
+#dogs img {
+  max-width: 48px;
+  border-radius: 10px;
+}
+
+#dogs img + img {
+  margin-left: 10px;
+}
+
+.chat-right {
+  align-self: flex-end;
+  background-color: #ffffff;
+  border-radius: 15px 15px 5px 15px;
+  box-shadow: 5px 5px 5px #0000000c;
+  color: #6e5d7e;
+}
+
+.info-price {
+  display: flex;
+  max-width: 200px;
+  background-image: linear-gradient(90deg, #e942ff, #8838ff);
+  padding: 15px;
+  border-radius: 15px 15px 15px 5px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-price li div {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #d89eff60;;
+}
+
+.info-price li:nth-child(2) {
+  color: #e8c9fc;
+  margin-left: -30px;
+}
+
+#margin-li {
+  margin-left: -50px;
+}
+
+.info-price li:last-child {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  margin-top: 10px;
+  background-color: #ffffff;
+  border-radius: 25px;
+}
+
+input {
+  padding: 10px;
+  border: none;
+  outline: none;
+  background: none;
+  
+}
+
+button {
+  border: none;
+  background-color: #3e2753;
+  border-radius: 50%;
+  color: #ffffff;
+  padding: 5px 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+input::placeholder {
+  color: #c6cacd;
+}
+
+/* Footer */
+
+footer {
+  text-align: center;
+}
+
+/* Responsive and Adaptative */
+
+@media (max-width: 1000px) {
+  
+  #main {
+    flex-direction: column;
+  }
+
+  #main section + article {
+    margin-left: 0;
+  }
+
+  section {
+    margin-bottom: 100px;
+  }
+
+  article {
+    text-align: center;
+  }
+
+  article p {
+    max-width: 300px;
+  }
+}
